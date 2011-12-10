@@ -1,0 +1,42 @@
+html {
+	background-color:#000;
+	color:#fff;
+
+}
+
+#skewerCanvas {
+	background-color:#000;
+	width:576;
+	height:576;
+}
+
+
+h1 {
+	font-family: System, monospace;
+	text-align:center;
+	font-size:4em;
+	text-shadow:5px 0px 0px #B2B109,-5px 0px 0px #B2B109, 0px 5px 0px #B2B109, 0px -5px 0px #B2B109;
+	font-stretch: condensed;
+	color:#821817;
+	letter-spacing:.3em;
+	line-height:.4em;
+}
+
+#main {
+	width:800px;
+	padding:10px;
+	text-align:center;
+	background-color: #CCCA14;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#821717), to(#CCCA14)); 
+  	background-image: -webkit-linear-gradient(top, #821717, #CCCA14); 
+	background-image:    -moz-linear-gradient(top, #821717, #CCCA14); 
+ 	background-image:     -ms-linear-gradient(top, #821717, #CCCA14); 
+ 	background-image:      -o-linear-gradient(top, #821717, #CCCA14); 
+  	background-image:         linear-gradient(to bottom, #821717, #CCCA14);
+	-webkit-border-top-left-radius: 40px;
+	-webkit-border-bottom-right-radius: 40px;
+	-moz-border-radius-topleft: 40px;
+	-moz-border-radius-bottomright: 40px;
+	border-top-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+}
