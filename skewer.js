@@ -38,6 +38,7 @@ Skewer.Models.Player = function () {
 	that.yPosition = Skewer.canvasHeight / 2 - 1;
 	that.xSize = 80;
 	that.ySize = 3;
+	that.boost = 100;
 	that.currentRotation = 45;
 	that.render = function (currentContext) {
 		currentContext.save();
@@ -84,8 +85,15 @@ Skewer.Models.Foods.Carrot = function () {
 	that.color = "rgb(255,150,0)";
 	Skewer.RenderList.push(that);
 	return that;	
-} 
+};
 Skewer.Models.Foods.List.push(Skewer.Models.Foods.Carrot);
+Skewer.Models.Foods.Apple = function () {
+	var that = Skewer.Models.Foods.Food();
+	that.color = "rgb(255,0,0)";
+	Skewer.RenderList.push(that);
+	return that;
+};
+Skewer.Models.Foods.List.push(Skewer.Models.Foods.Apple);
 
 /* Views */
 Skewer.Views = {};
@@ -141,6 +149,10 @@ Skewer.Input = function () {
 		Skewer.currentGame.player.xPosition = Skewer.currentGame.player.xPosition - Math.cos(Skewer.currentGame.player.currentRotation * Math.PI / 180);
 		Skewer.currentGame.player.yPosition = Skewer.currentGame.player.yPosition - Math.sin(Skewer.currentGame.player.currentRotation * Math.PI / 180);	
 	}
+	if (32 in this.keysDown) {
+		Skewer.currentGame.player.xPosition = Skewer.currentGame.player.xPosition + 5*Math.cos(Skewer.currentGame.player.currentRotation * Math.PI / 180);
+		Skewer.currentGame.player.yPosition = Skewer.currentGame.player.yPosition + 5*Math.sin(Skewer.currentGame.player.currentRotation * Math.PI / 180);
+	}
 };
 
 Skewer.CheckForSupport = function () {
@@ -164,7 +176,7 @@ Skewer.Render = function () {
 
 Skewer.SpawnPlayer = function () {
 	for(var renderableObject in this.RenderList) {
-		if (renderableObject = Skewer.currentGame.player) {
+		if (renderableObject == Skewer.currentGame.player) {
 			
 		}
 	}
