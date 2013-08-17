@@ -111,6 +111,7 @@ Skewer.GameLoop = function () {
 		Skewer.Render();
 		Skewer.lastRenderTime = Date.now();	
 	} 
+	Skewer.lastLoopTime - Date.now();
 };
 
 Skewer.Logic = function () {
